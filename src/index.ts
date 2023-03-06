@@ -64,3 +64,17 @@ let customerIDNumber= cid as number
 customerIDNumber=3
 //customerid='s'
 customerid=1
+
+//functions 
+
+function addNumber(x: number, y:number) :number{
+  return x + y
+}
+console.log('The sum is:',addNumber(5,3))
+
+//function without a return value
+
+function log(message:string | number): void{
+  console.log(message)
+}
+log('Hello world void function')

@@ -29,11 +29,30 @@ console.log(Direction1.Right);
 //objects
 const user = {
     id: 1,
-    firstname: 'John Doe'
+    firstname: 'John Doe',
 };
 console.log(user.firstname);
 const someuser = {
     id: 1,
-    name: 'John Doe Williams'
+    name: 'John Doe Williams',
 };
 console.log(someuser.name);
+//type Assertion
+let cid = 1;
+let customerid = cid;
+//or same as 
+let customerIDNumber = cid;
+//customerIDNumber='3'
+customerIDNumber = 3;
+//customerid='s'
+customerid = 1;
+//functions 
+function addNumber(x, y) {
+    return x + y;
+}
+console.log('The sum is:', addNumber(5, 3));
+//function without a return value
+function log(message) {
+    console.log(message);
+}
+log('Hello world void function');
