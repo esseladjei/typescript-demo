@@ -57,3 +57,10 @@ console.log(someuser.name);
 //type Assertion
 let cid: any = 1;
 let customerid = <number>cid;
+//or same as 
+
+let customerIDNumber= cid as number
+//customerIDNumber='3'
+customerIDNumber=3
+//customerid='s'
+customerid=1
