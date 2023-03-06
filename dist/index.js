@@ -25,7 +25,7 @@ var Direction1;
     Direction1[Direction1["Left"] = 3] = "Left";
     Direction1[Direction1["Right"] = 4] = "Right";
 })(Direction1 || (Direction1 = {}));
-console.log(Direction1.Right);
+console.log('enum:', Direction1.Right);
 //objects
 const user = {
     id: 1,
@@ -56,3 +56,13 @@ function log(message) {
     console.log(message);
 }
 log('Hello world void function');
+const useraccount = {
+    id: 1,
+    name: 'John Doe'
+};
+const p1 = 1;
+const p2 = 'string';
+const add = (x, y) => x + y;
+console.log('add:', add(4, 5));
+const sub = (x, y) => x - y;
+console.log('sub:', sub(10, 3));

@@ -29,7 +29,7 @@ enum Direction1 {
     Left = 3,
     Right = 4,
 }
-console.log(Direction1.Right);
+console.log('enum:', Direction1.Right);
 
 //objects
 
@@ -78,3 +78,29 @@ function log(message:string | number): void{
   console.log(message)
 }
 log('Hello world void function')
+
+//interfaces
+interface UserAccount{
+  id:number
+  name:string
+}
+
+const useraccount: UserAccount={
+  id:1,
+  name:'John Doe'
+}
+
+type Point =number | string //unions
+
+const p1:Point=1
+const p2:Point='string'
+
+//using interface with functions
+interface MathFunction {
+    (x: number, y: number): number;
+}
+const add: MathFunction=(x:number, y:number): number =>x+y
+console.log('add:',add(4,5))
+
+const sub: MathFunction = (x: number, y: number): number => x - y;
+console.log('sub:',sub(10,3))
