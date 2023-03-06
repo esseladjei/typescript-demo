@@ -104,3 +104,28 @@ console.log('add:',add(4,5))
 
 const sub: MathFunction = (x: number, y: number): number => x - y;
 console.log('sub:',sub(10,3))
+
+//class
+
+class Person{
+  /**  
+   * access modifier are public, private, protected 
+   * By default properties are public
+  **/ 
+  public id:number
+  protected name:string
+  private age:number
+
+  constructor(id:number, name:string, age: number){
+    this.id=id
+    this.name=name
+    this.age=age
+  }
+  register(){
+    return `${this.name} has registered with age ${this.age}`
+  }
+}
+
+const mikePerson= new Person(123,'Micheal',34)
+const johnPerson= new Person(12345, 'John Doe', 45)
+console.log(mikePerson.register(),'\n',johnPerson.register())
