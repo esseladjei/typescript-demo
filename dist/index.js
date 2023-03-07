@@ -91,6 +91,7 @@ class PersonClassInterface {
     }
 }
 // extending a class, to also have the properties of person and a self property of position 
+//Employee subclass
 class Employee extends Person {
     constructor(id, name, age, postion) {
         super(id, name, age); // used to call the constructor of its parent class to access the parent's properties and methods
@@ -103,3 +104,19 @@ class Employee extends Person {
 const employee = new Employee(1, "Micheal", 45, "Math teacher");
 console.log(employee.register());
 console.log(employee.paysRent());
+// Generics, helps to define class or function with works with different types
+//so this function has a type of any and it return any type as well , so it doesn't matter what you give it works
+//what if we want function of specific types
+function getArray(items) {
+    return new Array().concat(items);
+}
+let numArray = getArray([1, 2, 3, 4]);
+numArray.push('Paul'); // not error because of any
+let strArray = getArray(['Micheal', 'Peter', 'Simon']);
+// we create a generic for this problem
+function getArrays(items) {
+    return new Array().concat(items);
+}
+let someArrays = getArrays([1, 2, 3, 4]);
+someArrays.push(5);
+//someArrays.push("5")this will not work because of the number type defined 
