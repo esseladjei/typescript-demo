@@ -129,3 +129,47 @@ class Person{
 const mikePerson= new Person(123,'Micheal',34)
 const johnPerson= new Person(12345, 'John Doe', 45)
 console.log(mikePerson.register(),'\n',johnPerson.register())
+
+//implement an interface with class
+
+interface PersonInterface{
+  id:number
+  name:string
+  register(): string
+}
+
+//and when we want to use it with a class we implement the interface
+
+class PersonClassInterface implements PersonInterface{
+   id: number
+   name:string
+
+   constructor(id:number, name:string){
+      this.id=id
+      this.name=name
+   }
+   register(){
+    return 'he has registered'
+   }
+}
+
+// extending a class, to also have the properties of person and a self property of position 
+
+//Employee subclass
+class Employee extends Person{
+  
+  position: string //position property
+
+  constructor(id: number, name:string,age: number, postion:string){
+    super(id,name,age);// used to call the constructor of its parent class to access the parent's properties and methods
+    this.position=postion
+  }
+  paysRent(){
+    return `${this.name} working as ${this.position} has paid rent.`
+  }
+}
+const employee= new Employee(1,"Micheal",45,"Math teacher");
+console.log(employee.register())
+console.log(employee.paysRent())
+
+
